@@ -43,5 +43,14 @@ Our next step will be to populate our AA and PTR records so we can acknowldege o
 
 For WKS01 we can join the worstation without any problem using the control panel system section. 
 
+### Q's + Vocab
+
+The Install-WindowsFeature Powershell command seems to a very powerfull way of installing servives. This command is one I'd like to learn more about.
+
+The advnatages of having a non gui Server Core is anther topic I'd like to discuss more. 
+
+I wondered while waiting for the services to load on MGMNT01, how automated could this process be? Could this whole deployment be automated?
+
+
 
 
