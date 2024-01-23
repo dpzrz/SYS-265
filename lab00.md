@@ -16,7 +16,13 @@ Using our internet connection we cn configure our fw01 thriugh its web gui. We a
 ### AD01
   Our Server Core is CLI based and has no gui which is diffrent than our AD01 server from last semester. To assigne network configugarations we use the command `sconfig`. This command allows us to easily set the static IP of `10.0.5.5/24`. We set our gateway to `10.0.5.2` along with our perferred DNS. 
 
+The next step is to install our AD, we need to utilize powershell commands this time around to aid our installation. To invoke powershell in our CLI we can just type out powershell then hit enter.
 
+The command we need to install our services is `Install-WindowsFeature AD-Domain-Services -IncludeManagementTools`
+
+ To install the Forrest we need the following command `Install-ADDSForest -DomainName diego.local`
+
+ Follow the install prompts to finish the setup.
 
 
 
