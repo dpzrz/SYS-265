@@ -62,7 +62,11 @@ Some commands used for testing our SNMP service:
 
 * `tcpdump -1 ens192 -c 10 -X -s 0 port 161` this command allows us to see packets on port 161
 * `snmpwalk -Os -c SYS265 -v2c ad01-diego system`
-* 
+
+Questions:
+
+* What other capabilities does the SNMP service house?
+* What other network fatures can be installed on the AD server?
 
 ## Terms 
 SNMP: Simple Network Management Protocol
