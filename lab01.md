@@ -72,6 +72,7 @@ Questions:
 SNMP: Simple Network Management Protocol
 
 Computer Management (Tool): Used to see services runnign on AD01
+
 snmpwalk: retrieve a subtree of management values using SNMP GETNEXT requests 
 
 
