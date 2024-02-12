@@ -30,7 +30,7 @@ network:
 
 ### Domain and LAN
 
-### Docker Set-up
+## Docker Set-up
 
 
 ### Commands & Notes
