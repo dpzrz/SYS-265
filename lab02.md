@@ -6,3 +6,30 @@ This new vm is going to house our Docker service. This new VM is running an Unbu
 
 ### Network
 The first step is setting up our basic network function. This is done through netplan and configured using a `.yaml` file rather than through `nmtui`. This file is located in `/etc/netplan/`. This `.yml` file has a specific syntax when it comes to spacing. 
+
+This was the config I used on the .yml file. This config allowed for me to connect to our LAN.
+
+```
+network:
+  renderer: networkd
+  ethernets:
+    ens160:
+      dhcp4: no
+      addresses:
+        - 10.0.5.12/24
+      routes:
+        - to: default
+          via: 10.0.5.2
+      nameservers:
+        search:
+          - "diego.local"
+        addresses: [10.0.5.5]
+  version: 2
+  ```
+
+### Domain and LAN
+
+### Docker
+
+
+### Commands & Notes
