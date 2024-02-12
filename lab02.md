@@ -27,6 +27,7 @@ network:
   version: 2
   ```
 
+
 ### Domain and LAN
 
 ### Docker Set-up
