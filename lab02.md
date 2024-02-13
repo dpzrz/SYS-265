@@ -164,5 +164,9 @@ After this is complete you can now naviagte to youre local ip address on an inte
 ## Commands & Notes
 
 Docker commands:
-*
+
+* `docker ps`: List containers
+* `docker rm`: Remove one or more containers
+* `docker version`: Shows version info for the current Docker install
+* `docker run`: This can be used to run commands through a container
 
