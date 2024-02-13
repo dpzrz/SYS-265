@@ -27,8 +27,42 @@ network:
   version: 2
   ```
 
+After this we need to configure our record on our `ad01` machine. We can test this process by uusing hostnames when pinging and checking our dnslookup on each machine. 
+
 
 ### Domain and LAN
+
+We can now start this process only becasue we've configured our dns records and .yml network config. If realm commands arent wokring make sure `realmd` is installed.
+
+Use the command `realm discover name.local`
+
+You should see and output like this 
+```
+srv.world
+  type: kerberos
+  realm-name: SRV.WORLD
+  domain-name: srv.world
+  configured: no
+  server-software: active-directory
+  client-software: sssd
+  required-package: sssd-tools
+  required-package: sssd
+  required-package: libnss-sss
+  required-package: libpam-sss
+  required-package: adcli
+  required-package: samba-common-bin
+```
+ After we get this output we can see there are new packages we need to install in order to join the domain. These can all be installed together via the `apt install sssd sssd-tools libnss-sss libpam-sss adcli samba-common-bin oddjob oddjob-mkhomedir packagekit`
+
+ Now we can join our domain, double check you have all the necessary packages installed. Join the domain using the `realm join name.local`. You'll be prompted with a login, use your -adm account. You can now login via adm@diego.local.
+
+ 
+ 
+
+
+
+
+
 
 ## Docker Set-up
 
