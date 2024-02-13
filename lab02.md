@@ -56,15 +56,23 @@ srv.world
 
  Now we can join our domain, double check you have all the necessary packages installed. Join the domain using the `realm join name.local`. You'll be prompted with a login, use your -adm account. You can now login via adm@diego.local.
 
- 
- 
-
-
-
-
-
 
 ## Docker Set-up
 
+Its always good practice to update already installed packages, this can be done on Unbuntu by using the `sudo apt update`. 
+
+Were then gonna install a pre-req package that allows us to `apt` packages over HTTPS.
+
+`sudo apt install apt-transport-https ca-certificates curl software-properties-common`
+
+We then need to obtain the GPG key so we can use the offical Docker repo.
+
+`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
+
+Once we have the GPG key added we need to add the Docker repository to our `apt` sources.
+
+`sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"`
+
+Finally Docker can be installed
 
 ### Commands & Notes
