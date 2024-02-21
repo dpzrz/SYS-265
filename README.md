@@ -9,3 +9,5 @@ Diegos Tech Journal for Sys Admin II
 
 [Lab 02](https://github.com/dpzrz/SYS-265/blob/main/lab02.md) Docker Lab
 
+[Lab03]() Git and Linux SSH Script
+
