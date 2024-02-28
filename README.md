@@ -11,5 +11,5 @@ Diegos Tech Journal for Sys Admin II
 
 [Docker Mini Project](https://github.com/dpzrz/Docker-Mini-Project-SYS265) Docker Mini Project
 
-[Lab 03]() Git and Linux SSH Script
+[Lab 03](https://github.com/dpzrz/SYS-265/blob/main/lab03.md) Git and Linux SSH Script
 
