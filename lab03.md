@@ -22,4 +22,4 @@ The `git commit` command trails the repo configs. It commits the changes to the 
 
 ### Using Git on Windows
 
-Installing Git on widows can be done trhough a broser and can be found here(https://git-scm.com/download/win)
+Installing Git on widows can be done trhough a broser and can be found [here](https://git-scm.com/download/win)
