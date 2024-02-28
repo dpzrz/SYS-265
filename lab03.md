@@ -95,3 +95,19 @@ echo "Passwordless SSH access setup for user $USERNAME."
 ```
 
 This script can be found [here](https://github.com/dpzrz/SSH-Script-Assignment)
+
+## Commands & Notes
+
+Git Commands
+ * `git pull` Fetch from and integrate with another repository or a local branch
+ * `git push` Update remote refs along with associated objects
+ * `git clone` Clone a repository into a new directory
+ * `git commit -m` Record changes to the repository, the -m flag allows for a message
+ * `git add` Add file contents to the index
+ * `git status` Show the working tree status
+
+Other Commands
+ * `apt install` The apt install command installs a specified package from the repository, in our case used in Unbuntu
+ * `./` Put before the title of the .sh file and the format for running bash scripts.
+ *  `ssh-keygen` Ssh-keygen is a tool for creating new authentication key pairs for SSH
+   
