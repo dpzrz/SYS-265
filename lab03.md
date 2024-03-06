@@ -94,7 +94,7 @@ echo "Passwordless SSH access setup for user $USERNAME."
 
 ```
 
-This script can be found [here](https://github.com/dpzrz/SSH-Script-Assignment)
+This script can be found [here](https://github.com/dpzrz/SYS-265/blob/main/secure-ssh.sh)
 
 ## Commands & Notes
 
