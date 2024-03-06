@@ -34,4 +34,7 @@ The sys265 file has a line that allows sudo eleavtion without a password.
 
 ```
 
+## Ansible Tests
+We first need to set up a direcotry path on controller `/home/deployer/ansible/roles`.
+
 
