@@ -18,10 +18,18 @@ On the `controller` box we need a named sudo user with you're username and a sud
 Were installing Ansible on our `controller` box under our `deployer` user. The command used for Unbuntu install is `apt install`. Our install command is `sudo apt install ansible sshpass python3-paramiko`.
 
 ### Sudoers Config
-We need to now update our sudoers
+Were gona configure our sudo rules to allow for a passwordless sudo for deployer users. To start this process we need to create a file structure within `sudoers.d`, It'll look like this:
 
 ```
 etc
 └── sudoers.d
     └── sys265
+```
+
+The sys265 file has a line that allows sudo eleavtion without a password.
+
+```
+
+ deployer    ALL=(ALL)    NOPASSWD: ALL
+
 ```
