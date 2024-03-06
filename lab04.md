@@ -20,6 +20,8 @@ Were installing Ansible on our `controller` box under our `deployer` user. The c
 ### Sudoers Config
 We need to now update our sudoers
 
+```
 etc
 └── sudoers.d
     └── sys265
+```
