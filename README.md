@@ -13,3 +13,4 @@ Diegos Tech Journal for Sys Admin II
 
 [Lab 03](https://github.com/dpzrz/SYS-265/blob/main/lab03.md) Git and Linux SSH Script
 
+[Lab 04](https://github.com/dpzrz/SYS-265/blob/main/lab04.md) Automation with Ansible
