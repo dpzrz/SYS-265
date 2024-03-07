@@ -139,3 +139,32 @@ host_key_checking = false
 
 ## Software Deployment using win_chocolatey
 
+With the help of `win_chocolatey` a built-in function from ansible we can deploy packages to our windows machines. Using a new playbook called `windows_software.yml` for this playbook we installed Firefox and 7zip. `ansible windows -i inventory.txt roles/windows_software -u diego.perez-adm@diego.local --ask-pass`
+
+windows_software.yml
+```
+---
+- name: install windows application
+  hosts: windows
+  tasks:
+    - name: Install Firefox and 7zip
+    win_chocolatey:
+      name:
+      - firefox
+      - 7zip
+      state: present
+```
+
+We can deploy notepad++ using a simalr .yml file with some changes:
+
+```
+---
+- name: install windows application
+  hosts: windows
+  tasks:
+    - name: Install and pin Notepad++
+    win_chocolatey:
+      name: notepadplusplus
+      pinned: true
+      state: present
+```
