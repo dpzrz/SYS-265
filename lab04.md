@@ -91,3 +91,51 @@ firewalld
 ```
 A succsessful execution of this playbook will install webmin on our RockyOS box. This web service is now hosted on the computer in the webmin group. It can be asseced by `hostname.name.local` on port 10000.
 
+Were taksed with deplloying our own role using our own playbook. I chose to insale git role onto ansile01. I used the role from ansible-galaxy user [mauromedda.ansble_role_git](https://galaxy.ansible.com/ui/standalone/roles/mauromedda/ansible_role_git/documentation/). the .yml file will look like this.
+
+```
+---
+- name: git SYS265
+  hosts: ansible01-diego
+  become: true
+  roles:
+  - mauromedda.ansible_role_git
+```
+
+We used the same `ansible-playbook` command to launch out `git.yml` playbook.
+
+## Windows Automation
+
+We need to make sure [OpenSSH](https://www.saotn.org/install-openssh-in-windows-server/) SSH Server is running this is a nessecary service for the automation process. 
+
+If not installed, we can run powershell in administrator and envoke three commands:
+* `Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0`
+* `Start-Service sshd`
+* `Set-Service -Name sshd -StartupType 'Automatic'`
+
+Once OpenSSH is installed and enabled we need to set a default shell for SSH. 
+* `Set-ItemProperty "HKLM:\Software\Microsoft\Powershell\1\ShellIds" -Name ConsolePrompting -Value $true`
+* `New-ItemProperty -Path HKLM:\SOFTWARE\OpenSSH -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force`
+
+### Ansible Config
+
+We need to update our `inventory.txt` with a new group called `[windows]`. It'll look like this :
+```
+ansible01-diego
+[webmin]
+ansible02-diego
+[windows]
+mgmt01-diego
+[windows:vars]
+asnible_shell_type=powershell
+```
+This will allow us to acces sour windows box easier. We can test our connection to ngmt01-diego by using win_ping in ansible. The command for this process is `ansible windows -i inventory.txt -m win_ping -u diego.perez-adm@diego.local --ask-pass`
+
+*Note*: There might be an SSH error and this can be solved two ways, the way I chose was to create a `.cfg` file. that file looks like:
+```
+[defaults]
+host_key_checking = false
+```
+
+## Software Deployment using win_chocolatey
+
