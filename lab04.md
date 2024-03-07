@@ -19,7 +19,7 @@ Were installing Ansible on our `controller` box under our `deployer` user. The c
 
 ### Sudoers Config
 Were gona configure our sudo rules to allow for a passwordless sudo for deployer users. To start this process we need to create a file structure within `sudoers.d`, It'll look like this:
-
+ox (+Custom CSS) 
 ```
 etc
 └── sudoers.d
@@ -89,5 +89,5 @@ firewalld
   permanent: true
   state: enabled
 ```
-A succsessful execution of this playbook will install webmin on our RockyOS box
-```
+A succsessful execution of this playbook will install webmin on our RockyOS box. This web service is now hosted on the computer in the webmin group. It can be asseced by `hostname.name.local` on port 10000.
+
