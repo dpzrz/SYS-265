@@ -1,0 +1,9 @@
+---
+- name: install windows application
+  hosts: windows
+  tasks:
+    - name: Install and pin Notepad++
+    win_chocolatey:
+      name: notepadplusplus
+      pinned: true
+      state: present

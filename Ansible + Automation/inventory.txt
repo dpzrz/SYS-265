@@ -1,0 +1,7 @@
+ansible01-diego
+[webmin]
+ansible02-diego
+[windows]
+mgmt01-diego
+[windows:vars]
+asnible_shell_type=powershell

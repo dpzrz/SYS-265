@@ -1,0 +1,6 @@
+---
+- name: git SYS265
+  hosts: ansible01-diego
+  become: true
+  roles:
+  - mauromedda.ansible_role_git
