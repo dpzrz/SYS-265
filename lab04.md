@@ -67,6 +67,8 @@ Were going to deploy webmin on our asnible02 machine but this requires two steps
 * Install webmin through `ansible-galaxy` using the repo from semuadmin, `asnible-galaxy role install semuadmin.webmin -p roles/`
 * Second is creating a playbook that can install this role on our specified boxes.
 
+There is a syntax config that must be changes as were isntalling on a RockyOS box. The change lies in `/ansible/roles/semuadmin.webmin/tasks/main.yml` in this .yml file we have to change our `ansible_0s_family` arggument in the Add yum repository section. From Debian to Rocky.
+
 An Ansible playbook is a `.yml` that contains directions and plays that ansible will follow.
 
 Our `webmin.yml` playbook look like:
@@ -87,5 +89,5 @@ firewalld
   permanent: true
   state: enabled
 ```
-
+A succsessful execution of this playbook will install webmin on our RockyOS box
 ```
