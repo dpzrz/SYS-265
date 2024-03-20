@@ -38,8 +38,16 @@ Combinin these commands using the `|` will look something like this.
 
 In this section well be creating a Group deployment policy and workflow. Before we start this we need to create a network share. Using the File Server service we can create a new share on mgmt01. This network share will ouse our `.msi` file for PuTTy. This share should be accessible from a regular account.
 
-To use our Group Policy Management you might have to install the feature on `mgmnt01`. To install follow the roles and features guide in [this]() lab except with Group Policy Management.
+To use our Group Policy Management you might have to install the feature on `mgmnt01`. To install go to the Add Roles and Features dropdown and choose `mgmnt` Look through the fatures until you find Group Policy Management then ust follow the rest of the wizard.
 
+To utilize the new fature we open up our tools menu and click Group Policy Management. Under our Software Deploy OU we can create a policy named Deploy SW. By edditing this poplicy we can add a package to be deployed. Chose the PuTTy.msi install from the network share we created earlier.
 
+On our `Wks01` machine we need to run `gupdate /force`. This will restart our machine. After this our software will be insatlled on the machine.
 
 ## Logs and Event Viewing
+
+To confirm and view our new install we use the built-in tool Event Viewer. I created a filter for Group Policy Managment events and found the logged info in Application tab.
+
+To achieve this in Powershell we use the base command `Get-EventLog`. To specify the log name we use `-LogName`. Using our GUI info we can take the Event ID and use to to find the exact log, this is done by using `InstanceID`.
+
+`Get-EventLog -LogName Application -InstanceID 119`
