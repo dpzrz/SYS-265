@@ -14,6 +14,14 @@ This command is realtivley simple, The command uses `New-ADOrganizationalUnit`. 
 
 #### Moving items into an OU
 
+We have to move two items into our newly created OU. We have to move a computer and a user. We use similar syntax to our last command. We establish a target path and use `Get-Computer` to obtain the info on WKS01-DIEGO. 
+
+`Get-Computer WKS01-DIEGO | Move-ADObject -TargetPath 'OU=Software Deploy,DC=diego.local,DC=local'`
+
+To move a User into Software Deploy we use the same command with some minor tweaks. We need to use `Get-ADUser` to obtain the proper user and `-Identity` to specify which user.
+
+`Get-ADUser -Identity diego.perez | Move-ADObject -TargetPath 'OU=Software Deploy,DC=diego.local,DC=local'`
+
 #### Deleting an OU 
 
 The first cmdlet we’ll use, `Get-ADOrganizationlUnit`, identifies the specific OU and holds it in memory.
