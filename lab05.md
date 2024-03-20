@@ -36,4 +36,10 @@ Combinin these commands using the `|` will look something like this.
 
 ## GPO Installation and Deployment
 
+In this section well be creating a Group deployment policy and workflow. Before we start this we need to create a network share. Using the File Server service we can create a new share on mgmt01. This network share will ouse our `.msi` file for PuTTy. This share should be accessible from a regular account.
+
+To use our Group Policy Management you might have to install the feature on `mgmnt01`. To install follow the roles and features guide in [this]() lab except with Group Policy Management.
+
+
+
 ## Logs and Event Viewing
