@@ -169,6 +169,7 @@
 * * Check Pinata for the Automatically uploaded folder
 
 ## Reflection
+Overall, this process tested the docuemntation aspect of isntallation. There were multiple ways of installing IPFS and these solutions involved varying degrees of challenge. There was an untested docker installation that seemd promising but while diving deeper into the documentatiosn resluted in mnay compatability issues. The group aspect of this assignment was beneficial for the spreading out of workloads. My teammates proved helpful.
 
 ## Sources
 * [IPFS Documentation](https://docs.ipfs.tech/install/)
