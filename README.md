@@ -16,3 +16,5 @@ Diegos Tech Journal for Sys Admin II
 [Lab 04](https://github.com/dpzrz/SYS-265/blob/main/lab04.md) Automation with Ansible
 
 [Lab 05](https://github.com/dpzrz/SYS-265/blob/main/lab05.md) AD Group Policy & SW Deployment
+
+[Network Storage Group Project](https://github.com/dpzrz/SYS-265/blob/main/networkstorageproject.md)
