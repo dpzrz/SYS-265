@@ -6,7 +6,7 @@
 ### Using Git on Docker
 
 
-Github is what we've been using for all out tech journals and documentation for CNCS classes. Were utilizing git fro this lab to allow our user to `push` `pull` `clone` and `commit`.
+Github is what we've been using for all out tech journals and documentation for CNCS classes. Were utilizing git for this lab to allow our user to `push` `pull` `clone` and `commit`.
 
 
 Were first tasked with loading a whole git repositorty made specifically for this lab. For me this repisisotory is named tech-journal-private. Using the git `clone` command we can copy over the entirety of the repo onto our docker machine. 
