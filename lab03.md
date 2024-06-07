@@ -30,9 +30,9 @@ For out of sync repos we can utilize the `git pull` command and pull down all ch
 
 ### Hardening SSH
 
-First, we must install git in web01-diego. Our web boxes use the `yum` package manager compared to the `apt` used in Unbuntu. We clone our current reppository that should be structrued for this second part into web01. On web01-diego we create a .sh file titled `secure-ssh`. This file will be the script fro our passwordless sign-on. After we push to our repo to update it.
+First, we must install git in web01-diego. Our web boxes use the `yum` package manager compared to the `apt` used in Unbuntu. We clone our current reppository that should be structrued for this second part into web01. On web01-diego we create a .sh file titled `secure-ssh`. This file will be the script for our passwordless sign-on. After we push to our repo to update it.
 
-On web01 we must create an RSA keypair specifically one with no passphrase. WE then have to copy that PUBLIC key the local repo files. The comand we use for this is `cp`. After push and commit. 
+On web01 we must create an RSA keypair specifically one with no passphrase. We then have to copy that PUBLIC key the local repo files. The comand we use for this is `cp`. After push and commit. 
 
 Now back on our docker01 box, we have to perform a git pull to sync the local repo. 
 
